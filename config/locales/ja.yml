@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    models:
+      room: ルーム
+    attributes:
+      room:
+        job_world: 志望業種
+        job_contents: 志望職種
+        room_condition: 入室条件
+        

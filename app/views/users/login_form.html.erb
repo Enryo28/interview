@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ログイン</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/login_form.scss">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <div class="header-logo">
+        <nav>
+           <ul>
+              <li id = "login_first">
+                <%= link_to("練習", root_path)  %>
+              </li>
+              <li id = "login_second">
+                <%= link_to("ログイン", login_path)  %>
+              </li>
+              <li id = "login_third">
+                <%= link_to("新規登録", signup_path)  %>
+              </li>
+           </ul>
+        </nav>  
+      </div>
+      <div class = "header-icon">
+        <ul>
+          <li>
+            <form id = "news_form" action = "#" method = "get">
+              <button type = "submit" id = news_btn>
+               <i class="far fa-bell fa-lg fa-fw"></i>
+              </button>
+            </form>
+          </li>
+          <li>
+           <a href="#"><img src="https://via.placeholder.com/48x48" alt="バーナー1"></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    
+    <main>
+          <div class = "user_login">
+             <h1>ログイン</h1>
+               
+               <% if @error_message %>
+                  <div class="login-error">
+                    <%= @error_message %>
+                  </div>
+               <% end %>
+               
+               <%= form_for @user, url: login_path do |f| %>
+                  <p>メールアドレス</p>
+                  <label><%= f.email_field :email, :size=>"70" %></label>
+                  <p>パスワード</p>
+                  <label><%= f.password_field :password, :size=>"70" %></label>
+                  
+                  <div class = "login_button">
+                    <%= f.submit "ログイン" %>
+                  </div>
+               <% end %>
+          </div>
+    </main>
+</body>
+</html>

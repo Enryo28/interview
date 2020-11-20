@@ -1,0 +1,234 @@
+main {
+    width: 900px;
+    
+ }
+ 
+.making_room_confirm h1 {
+    position: absolute;
+    font-weight: bold;
+    font-size: 30px;
+    color: #001A79;
+    margin-left: 270px;
+}
+
+ .person_room_confirm img {
+  position: absolute;
+  float: left;
+  left: 290px;
+  top: 220px;
+  bottom: 18px;
+  right: 936px;
+  border-radius: 10px;
+}
+
+#job_world_cofirm {
+  position: absolute;
+  float: left;
+  left: 410px;
+  top: 200px;
+  // bottom: 18px;
+  right: 936px;
+  width: 85px;
+  font-size: 15px;
+  background-color: #D8E0FF;
+  text-align: center;
+  border-radius: 4px;
+}
+
+#job_kind_cofirm {
+  position: absolute;
+  float: left;
+  left: 410px;
+  top: 245px;
+  right: 936px;
+  width: 85px;
+  font-size: 15px;
+  background-color: #D8E0FF;
+  text-align: center;
+  border-radius: 4px;
+}
+
+#hope_confirm {
+  position: absolute;
+  float: left;
+  left: 410px;
+  top: 290px;
+  right: 936px;
+  width: 85px;
+  font-size: 15px;
+  background-color: #D8E0FF;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.person_room_confirm ul {
+    list-style-type: none;
+}
+
+.job_world_name_confirm {
+  position: absolute;
+  float: left;
+  left: 500px;
+  top: 200px;
+  right: 936px;
+  width: 80px;
+  font-size: 15px;
+}
+
+#job_kind_name_confirm {
+  position: absolute;
+  float: left;
+  left: 500px;
+  top: 245px;
+  right: 936px;
+  width: 80px;
+  font-size: 15px;
+  
+}
+
+#hope_name_confirm {
+  position: absolute;
+  float: left;
+  left: 500px;
+  top: 290px;
+  right: 936px;
+  width: 80px;
+  font-size: 15px;
+}
+
+#back_confirm   {
+    width: 900px;
+    height: 145px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    float: left;
+    left: 270px;
+    top: 200px;
+    bottom: 18px;
+    right: 936px;
+        
+}
+
+#practice_explain {
+    position: absolute;
+    float: left;
+    width: 900px;
+    left: 270px;
+    top: 380px;
+    right: 936px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#name_confirm {
+    position: absolute;
+    float: left;
+    width: 900px;
+    left: 310px;
+    top: 420px;
+    right: 936px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#frirst_practice_explain {
+    position: absolute;
+    float: left;
+    width: 900px;
+    left: 270px;
+    top: 450px;
+    right: 936px;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 2px solid #C4C4C4;
+    padding-bottom: 30px;
+}
+
+#interviewer {
+  font-size: 35px;
+  color: #001A79;
+}
+
+#capchar {
+    position: absolute;
+    float: right;
+    left: 680px;
+    top: 600px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.screen_capchar {
+  list-style-type: none;
+  text-align: center;
+  margin-left: 780px;
+  margin-top: 460px;
+  width: 420px;
+}
+
+.on {
+    float: left;
+    width: 120px;
+    height: 80px;
+}
+
+.off {
+    float: left;
+    width: 120px;
+    height: 80px;
+    margin-left: 20px;
+}
+
+.on a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  background-color:  #001A79;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.off a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: #E5E5E5;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.off a:hover {
+    background-color:  #001A79;
+}
+
+
+.make_room_button_confirm {
+    float: left;
+    text-align: center;
+    height: 70px;
+    margin-left: 270px;
+    margin-top: 110px;
+    border-radius: 8px;
+}
+
+.make_room_button_confirm input {
+  width: 900px;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  background-color: #000080;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.make_room_button_confirm input:hover {
+     position: relative;
+     opacity: 0.8;
+     cursor: pointer;
+}
+

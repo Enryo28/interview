@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新規登録</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/signup.scss">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <div class="header-logo">
+        <nav>
+           <ul>
+              <li id = "signup_first">
+                <%= link_to("練習", root_path)  %>
+              </li>
+              <li id = "signup_second">
+                <%= link_to("ログイン", login_path)  %>
+              </li>
+              <li id = "signup_third">
+                <%= link_to("新規登録", signup_path)  %>
+              </li>
+           </ul>
+        </nav>  
+      </div>
+      <div class = "header-icon">
+        <ul>
+          <li>
+            <form id = "news_form" action = "#" method = "get">
+              <button type = "submit" id = news_btn>
+               <i class="far fa-bell fa-lg fa-fw"></i>
+              </button>
+            </form>
+          </li>
+          <li>
+           <a href="#"><img src="https://via.placeholder.com/48x48" alt="バーナー1"></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    
+    <main>
+          <div class = "user_signup">
+             <h1>新規ユーザー登録</h1>
+               
+               <% @user.errors.full_messages.each do |message| %>
+                    <div class="signup_error">
+                      <%= message %>
+                    </div>
+               <% end %>
+               
+               <%= form_for @user, url: users_path do |f| %>
+                  <p>ユーザー名<span>必須</span></p> 
+                  <label><%= f.text_field :name, :size=>"70" %></label>
+                  <p>プロフィール画像</p>
+                  <label><%= f.file_field :image_name %></label>
+                  <p>メールアドレス<span>必須</span></p>
+                  <label><%= f.email_field :email, :size=>"70" %></label>
+                  <p>パスワード<span>必須</span></p>
+                  <label><%= f.password_field :password, :size=>"70" %></label>
+                  <p>パスワード確認<span>必須</span></p>
+                  <label><%= f.password_field :password_confirmation , :size=>"70" %></label>
+                  
+                  <div class = "signup_button">
+                    <%= f.submit "登録" %>
+                  </div>
+               <% end %>
+          </div>
+    </main>
+</body>
+</html>

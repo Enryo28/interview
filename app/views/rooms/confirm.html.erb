@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ルーム確認</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/new_confirm.scss">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <div class="header-logo">
+        <nav>
+           <ul>
+              <li id = "first">
+                <%= link_to("練習", root_path)  %>
+              </li>
+              <li id = "second">
+                <%= link_to("ログイン", "#")  %>
+              </li>
+              <li id = "third">
+                <%= link_to("新規登録", signup_path)  %>
+              </li>
+           </ul>
+        </nav>  
+      </div>
+      <div class = "header-icon">
+        <ul>
+          <li>
+            <form id = "news_form" action = "#" method = "get">
+              <button type = "submit" id = news_btn>
+               <i class="far fa-bell fa-lg fa-fw"></i>
+              </button>
+            </form>
+          </li>
+          <li>
+           <a href="#"><img src="https://via.placeholder.com/48x48" alt="バーナー1"></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    
+    <main>
+      <div class = "making_room_confirm">
+              <h1>ルームを作る</h1>
+              <div class = "person_room_confirm">
+              <div id = "back_confirm"></div>
+              <% @rooms.each do |room| %>
+                <ul>
+                    <li>
+                       <a href="#"><img src="https://via.placeholder.com/100x100" alt="バーナー1"></a>
+                    </li>
+                    <li>
+                       <p id = "job_world_cofirm">志望業種</p>
+                       <%= room.job_world %>
+                    </li>
+                    <li>
+                       <p id = "job_kind_cofirm">志望職種</p>
+                       <%= room.job_contents %>
+                    </li>
+                    <li>
+                       <p id = "hope_confirm">入室条件</p>
+                       <%= room.room_condition %>
+                    </li>
+                </ul>
+               <% end %>
+                  <p id = "practice_explain">入室が許可されたらお互いに面接官役・就活生役になり練習を行います。</p>
+                  <br>
+                  <p id = "name_confirm">#name</p>
+                  <br>
+                  <p id = "frirst_practice_explain">あなたは初め<span id = "interviewer">面接官役</span>です</p>
+              </div>
+              <p id = "capchar">画面録画</p>
+                <ul class = "screen_capchar">
+                   <li class = "on"><%= link_to("ON","#") %></li>
+                   <li class = "off"><%= link_to("OFF","#") %></li>
+                </ul>
+            <%= form_with url: rooms_path, method: :post, local: true do |f| %>
+              <div class = "make_room_button_confirm">
+                  <%= f.submit "ルームを作る" %>
+              </div>
+            <% end %>
+      </div>
+    </main>
+</body>
+</html>

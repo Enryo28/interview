@@ -1,0 +1,430 @@
+@charset "UTF-8";
+
+ body {
+     background-color:#F0F2F5;
+     width: 1440px;
+     height: 1265px;
+     font-family: "Hiragino Kaku gothic ProN", "メイリオ", sans-serif ;
+     margin: 0px;
+     padding: 0px;
+ }
+ 
+
+header {
+    background-color: white;
+    width: 1440px;
+    border-bottom: 8px solid #CCCCCC;
+    height: 80px;
+ }
+
+.header-logo {
+    margin-left: 230px;
+}
+
+.header-logo nav  ul {
+    list-style: none;
+    float: left;
+    margin-top: 28px;
+    
+}
+
+.header-logo nav ul li {
+    display: inline;
+    
+}
+   
+.header-logo nav ul li a {
+    text-decoration: none;
+    color: #001A79;
+    text-align: center;
+    padding: 23px 15px;
+    font-size: 20px;
+}
+
+.header-logo nav ul li :hover  {
+    font-weight: bolder;
+    position: relative;
+    border-bottom: 5px  solid #0FF;
+  }
+
+
+
+
+#first {
+    font-weight: bolder;
+    position: relative;
+    border-bottom: 5px solid #0FF;
+    padding: 23px 0px;
+}
+
+#second {
+    margin-left: 95px;
+}
+
+#third {
+    margin-left: 95px;
+}
+
+.header-icon ul {
+    list-style: none;
+    float: right;
+    
+}
+
+.header-icon ul li {
+  display: inline;
+ 
+ }
+
+
+.header-icon ul li  img {
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 80px;
+    width: 48px;
+    height: 48px;
+    top: 16px;
+    
+  }
+
+
+#news_form {
+    margin-right: 140px;
+   
+   
+}
+
+#news_btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 23.62px;
+    height: 27px;
+    
+   
+}
+   
+
+    
+
+
+
+main {
+  width: 900px;
+
+}   
+
+
+
+
+.main-top {
+    width: 900px;
+
+    
+}
+
+main nav ul  {
+  list-style-type: none;
+  text-align: center;
+  margin-left: 230px;
+  margin-right: 270px;
+  margin-top: 30px;
+ 
+}
+
+main nav ul li {
+  float: left;
+  width: 450px;
+  height: 50px;
+}
+
+
+
+main nav ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  
+  
+
+}
+
+main nav ul li a:hover  {
+    font-weight: bolder;
+    position: relative;
+    background-color: #B5C4FF;
+    
+    
+}
+
+main nav ul li.current a{
+    background-color: #B5C4FF;
+    font-weight: bolder;
+}
+
+
+
+.make_room h2  {
+//   width: 234px;
+//   height: 29px;
+  font-size: 24px;
+  position: absolute;
+//   float: left;
+  margin-left: 270px;
+  top: 200px;
+//   bottom: 18px;
+//   right: 936px;
+}
+
+
+.make_button {
+    float: left;
+    text-align: center;
+    width: 320px;
+    height: 64px;
+    margin-left: 270px;
+    margin-top: 110px;
+    background-image: url("https://images.unsplash.com/photo-1575252663512-b25714ec27f9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9");
+    padding: 38px  290px;
+    border-radius: 8px;
+    background-position: center;
+}
+
+.make_button a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  background-color: #000080;
+  border-radius: 20px;
+}
+  
+
+.make_button a:hover {
+     position: relative;
+     opacity: 0.8;
+}
+
+.people_room h2  {
+    // float: left;
+    font-size: 24px;
+    position: absolute;
+    margin-right: 638px;
+    // width: 331px;
+    // height: 29px;
+    // margin-left: 200px;
+    // top: 430px;
+    // padding-bottom: 40px;
+    margin-top: 30px;
+}
+
+// #job_serch {
+//     position: absolute;
+//     width: 900px;
+//     height: 56px;
+//     margin-left: 270px;
+//     margin-top: 400px;
+// }
+
+// #search_box {
+//     height: 44px;
+//     padding: 0 10px;
+//     position: absolute;
+//     border-radius: 10px;
+//     background: white;
+//     border: none;
+//     width: 880px;
+  
+// }
+   
+
+// #sbtn {
+//     background: none;
+//     border: none;
+//     font-size: 20px;
+//     position: absolute;
+//     margin-left: 855px;
+//     margin-top: 10px;
+//     cursor: pointer;
+// }
+
+// #finance {
+//   position: absolute;
+//   float: left;
+//   left: 270px;
+//   top: 570px;
+//   bottom: 18px;
+//   right: 936px;
+// }
+
+// .peple_room h2 {
+//     margin-top: 70px;
+// }
+
+
+.person_room img {
+//   position: absolute;
+//   float: left;
+//   left: 320px;
+//   top: 660px;
+//   bottom: 18px;
+//   right: 936px;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.person_room .name  {
+//   position: absolute;
+//   float: left;
+  margin-left: 40px;
+//   top: 560px;
+//   bottom: 18px;
+//   right: 936px;
+//   width: 210px;
+  font-weight: bolder;
+  font-size: 17px;
+  text-decoration: none;
+  color: black;
+}
+
+#job_world {
+  width: 80px;
+  font-size: 13px;
+  background-color: #D8E0FF;
+  text-align: center;
+  border-radius: 4px;
+}
+#job_kind {
+
+
+    
+//   position: absolute;
+//   float: left;
+//   left: 320px;
+//   top: 725px;
+//   right: 936px;
+  width: 80px;
+  font-size: 13px;
+  background-color: #D8E0FF;
+  text-align: center;
+  border-radius: 4px;
+    
+}
+
+#hope {
+
+    
+//   position: absolute;
+//   float: left;
+//   left: 320px;
+//   top: 760px;
+//   right: 936px;
+  width: 80px;
+  font-size: 13px;
+  background-color: #D8E0FF;
+  text-align: center;
+  border-radius: 4px;
+    
+}
+
+// // .person_room {
+// //   padding: 5px 15px;
+// //   overflow: hidden;
+// }
+
+.person_room ul {
+    list-style-type: none;
+}
+
+.person_room ul li {
+    // float: left;
+    // text-align: center;
+}
+
+.job_world_name {
+    font-size: 15px;
+}
+.job_kind_name {
+//   position: absolute;
+//   float: left;
+//   left: 410px;
+//   top: 722px;
+//   right: 936px;
+//   width: 80px;
+  font-size: 15px;
+  
+}
+
+.hope_name {
+//   position: absolute;
+//   float: left;
+//   left: 410px;
+//   top: 757px;
+//   right: 936px;
+//   width: 80px;
+  font-size: 15px;
+}
+
+// #back   {
+//     width: 440px;
+// //     height: 188px;
+// //     background-color: white;
+// //     border-radius: 10px;
+// //     position: absolute;
+// //     float: left;
+// //     left: 270px;
+// //     top: 640px;
+// //     bottom: 18px;
+// //     right: 936px;
+        
+// }
+
+.people_room {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    width: 1440px;
+}
+
+.person_room {
+     width: 440px;
+    // // height: 188px;
+    background-color: white;
+    border-radius: 10px;
+    // // position: absolute;
+    float: left;
+    // display: inline-block;
+    // // left: 270px;
+    // // top: 640px;
+    // // bottom: 18px;
+    // // right: 936px;
+    // // padding: 5px 5px;
+    // text-align: center;
+    margin-top: 80px;
+    margin-left: 10px;
+    padding: 5px 0px;
+}
+// .person_room:first-child {
+//     margin-left: 270px;
+// }
+
+// .person_room ul {
+//     margin-top: 80px;
+//     margin-left: 10px;
+// }
+
+.success {
+  color: blue;
+  background: rgb(251, 170, 88);
+  text-align: center;
+  position: absolute;
+  width: 62.5%;
+  border-radius: 4px;
+  font-size: 20px;
+  top: 180px;
+  margin-left: 270px;
+}

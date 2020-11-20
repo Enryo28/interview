@@ -1,0 +1,153 @@
+main {
+    width: 900px;
+    
+ }
+
+.making_room h1 {
+    position: absolute;
+    font-weight: bold;
+    font-size: 30px;
+    color: #001A79;
+    margin-left: 270px;
+}
+
+.job_world  {
+    width: 900px;
+    height: 192px;
+}
+
+.job_world p {
+    position: absolute;
+    float: left;
+    margin-top: 80px;
+    border-bottom: 1px solid  #001A79;
+    width: 670px;
+}
+
+#select {
+    margin-left: 270px;
+    font-weight: bold;
+}
+
+#explain {
+    margin-left: 500px;
+}
+
+ .world_form  {
+    position: absolute;
+    margin-top: 120px;
+    width: 900px;
+    margin-left: 250px;
+}
+
+.world_form input {
+  margin: 25px 22px;
+  
+}
+
+
+
+
+
+
+.job_contents  {
+    width: 900px;
+    height: 192px;
+}
+
+.job_contents p {
+    position: absolute;
+    float: left;
+    margin-top: 160px;
+    border-bottom: 1px solid  #001A79;
+    width: 670px;
+}
+
+#select_1 {
+    margin-left: 270px;
+    font-weight: bold;
+}
+
+#explain_1 {
+    margin-left: 500px;
+}
+
+.contents_form {
+    position: absolute;
+    margin-top: 200px;
+    width: 900px;
+    margin-left: 250px;
+}
+
+.contents_form input {
+  margin: 25px 22px;
+}
+
+.room_condition  {
+    width: 900px;
+    height: 192px;
+}
+
+.room_condition p {
+    position: absolute;
+    float: left;
+    margin-top: 180px;
+    border-bottom: 1px solid  #001A79;
+    width: 670px;
+}
+
+#select_2 {
+    margin-left: 270px;
+    font-weight: bold;
+}
+
+#explain_2 {
+    margin-left: 500px;
+}
+
+.condition_form {
+    position: absolute;
+    margin-top: 220px;
+    width: 900px;
+    margin-left: 250px;
+}
+
+.condition_form input {
+  margin: 25px 22px;
+}
+
+
+.next_button {
+    float: left;
+    text-align: center;
+    height: 70px;
+    margin-left: 270px;
+    margin-top: 180px;
+    border-radius: 8px;
+}
+
+.next_button input {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  background-color: #000080;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  width: 900px;
+}
+
+.next_button input:hover {
+     position: relative;
+     opacity: 0.8;
+     cursor: pointer;
+}
+
+.form_error {
+    margin-top: 20px;
+    margin-left: 600px;
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}

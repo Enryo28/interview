@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ルーム一覧</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/home.scss">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+      <div class="header-logo">
+        <nav>
+          <% if user_signed_in? %>
+           <ul>
+              <li id = "first">
+                <%= link_to("練習", root_path)  %>
+              </li>
+              <li id = "second">
+                <%= link_to("ログアウト", destroy_user_session_path)  %> 
+              </li>
+              <li id = "third">
+                <%= link_to("Myルーム", edit_user_registration_path)  %> 
+              </li>
+           </ul>
+          <% else %>
+           <ul>
+              <li id = "first">
+                <%= link_to("練習", root_path)  %>
+              </li>
+              <li id = "second">
+                <%= link_to("ログイン", new_user_session_path)  %>
+              </li>
+              <li id = "third">
+                <%= link_to("新規登録", new_user_registration_path)  %>
+              </li>
+           </ul>
+          <% end %>
+        </nav>  
+      </div>
+      <div class = "header-icon">
+        <ul>
+          <li>
+            <form id = "news_form" action = "#" method = "get">
+              <button type = "submit" id = news_btn>
+               <i class="far fa-bell fa-lg fa-fw"></i>
+              </button>
+            </form>
+          </li>
+          <li>
+           <a href="#"><img src="https://via.placeholder.com/48x48" alt="バーナー1"></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+          <nav>
+              <ul class = "main-top">
+               <li class = "current"><%= link_to("誰かと",root_path) %></li>
+               <li class = "current_1"><%= link_to("1人で","#") %></li>
+              </ul>
+          </nav>
+          <div class = "make_room">
+              <div class = "success">
+                <%= flash[:notice] %>
+              </div>
+            <section>
+              <h2 id = "room_by_me">自分でルームを作る</h2>
+              <div class = "make_button">
+              <%= link_to("ルームを作る",new_room_path) %>
+              </div>
+            </section>
+          </div>
+          <div class = "people_room">
+           <h2 id = "find_room">誰かのルームに参加する</h2>
+            <% @rooms.each do |room| %>
+                     <div class = "person_room">
+                        <ul>
+                          <li>
+                             <img src = <%= room.user.image_name %> >
+                             <%= link_to("#{room.user.name}さんのルーム", "/rooms/#{room.id}" , {class: "name"}) %>
+                          </li>
+                          <li>
+                             <p id = "job_world">志望業種</p>
+                             <div class = "job_world_name">
+                               <%= room.job_world %>
+                             </div>
+                          </li>
+                          <li>
+                             <p id = "job_kind">志望職種</p>
+                             <div class = "job_kind_name">
+                               <%= room.job_contents %>
+                             </div>
+                          </li>
+                          <li>
+                             <p id = "hope">入室条件</p>
+                             <div class = "hope_name">
+                               <%= room.room_condition %>
+                             </div>
+                          </li>
+                        </ul>
+                      </div>
+              <% end %>
+          </div>
+      </div>
+    </main>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+.showroom img {
+  position: absolute;
+  float: left;
+  left: 290px;
+  top: 170px;
+  border-radius: 10px;
+}
+
+.showroom ul {
+    list-style-type: none;
+}
+
+
+#back_showroom   {
+    width: 900px;
+    height: 145px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    float: left;
+    left: 270px;
+    top: 150px;
+    bottom: 18px;
+    right: 936px;
+        
+}
+
+#job_world_show {
+  position: absolute;
+  float: left;
+  left: 410px;
+  top: 150px;
+  // bottom: 18px;
+  right: 936px;
+  width: 85px;
+  font-size: 15px;
+  background-color: #D8E0FF;
+  text-align: center;
+  border-radius: 4px;
+}
+
+#job_kind_show {
+  position: absolute;
+  float: left;
+  left: 410px;
+  top: 195px;
+  right: 936px;
+  width: 85px;
+  font-size: 15px;
+  background-color: #D8E0FF;
+  text-align: center;
+  border-radius: 4px;
+}
+
+#hope_show {
+  position: absolute;
+  float: left;
+  left: 410px;
+  top: 240px;
+  right: 936px;
+  width: 85px;
+  font-size: 15px;
+  background-color: #D8E0FF;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.job_world_name_show {
+  position: absolute;
+  float: left;
+  left: 530px;
+  top: 165px;
+  right: 936px;
+  width: 200px;
+  font-size: 15px;
+}
+
+.job_kind_name_show {
+  position: absolute;
+  float: left;
+  left: 530px;
+  top: 210px;
+  right: 936px;
+  width: 200px;
+  font-size: 15px;
+  
+}
+
+.hope_name_show {
+  position: absolute;
+  float: left;
+  left: 530px;
+  top: 255px;
+  right: 936px;
+  width: 200px;
+  font-size: 15px;
+}
+
+
+#practice_explain {
+    position: absolute;
+    float: left;
+    width: 900px;
+    left: 270px;
+    top: 330px;
+    right: 936px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#frirst_practice_explain {
+    position: absolute;
+    float: left;
+    width: 900px;
+    left: 270px;
+    top: 400px;
+    right: 936px;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 2px solid #C4C4C4;
+    padding-bottom: 30px;
+}
+
+.join_room_button {
+    float: left;
+    text-align: center;
+    height: 70px;
+    margin-left: 270px;
+    margin-top: 430px;
+    border-radius: 8px;
+}
+
+.join_room_button input {
+  width: 900px;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  background-color: #000080;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.join_room_button input:hover {
+     position: relative;
+     opacity: 0.8;
+     cursor: pointer;
+}
+

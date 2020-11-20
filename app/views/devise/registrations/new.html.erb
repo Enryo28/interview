@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新規登録</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/signup.scss">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <div class="header-logo">
+        <nav>
+           <ul>
+              <li id = "signup_first">
+                <%= link_to("練習", root_path)  %>
+              </li>
+              <li id = "signup_second">
+                <%= link_to("ログイン", edit_user_registration_path)  %>
+              </li>
+              <li id = "signup_third">
+                <%= link_to("新規登録", new_user_registration_path)  %>
+              </li>
+           </ul>
+        </nav>  
+      </div>
+      <div class = "header-icon">
+        <ul>
+          <li>
+            <form id = "news_form" action = "#" method = "get">
+              <button type = "submit" id = news_btn>
+               <i class="far fa-bell fa-lg fa-fw"></i>
+              </button>
+            </form>
+          </li>
+          <li>
+           <a href="#"><img src="https://via.placeholder.com/48x48" alt="バーナー1"></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    
+    <main>
+
+
+   <div class = "user_signup">
+        <h2>新規ユーザー登録</h2>
+        
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+        
+          <div class="field">
+            <%= f.label :name %><span>必須</span> <br />
+            <%= f.text_field :name, autofocus: true %>
+          </div>
+        
+          <div class="field">
+            <%= f.label :email %> <span>必須</span> <br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          </div>
+        
+          <div class="field">
+            <%= f.label :password %> 
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> 文字以上)</em>
+            <% end %><span>必須</span><br />
+            <%= f.password_field :password, autocomplete: "new-password" %>
+          </div>
+        
+          <div class="field">
+            <%= f.label :password_confirmation %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+          </div>
+        
+          <div class="field">
+            <%= f.label :プロフィール画像 %><br />
+            <%= f.file_field :image_name, autocomplete: "image" %>
+          </div>
+        
+        
+          <div class="signup_button">
+            <%= f.submit "登録" %>
+          </div>
+        <% end %>
+        
+        <%= render "devise/shared/links"  %> 
+　　 </main>
+　　</div>
+</body>
+</html>

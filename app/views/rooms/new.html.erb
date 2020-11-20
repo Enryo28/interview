@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ルーム作成</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/new.scss">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <div class="header-logo">
+        <nav>
+           <ul>
+             <li id = "first">
+                <%= link_to("練習", root_path)  %>
+              </li>
+              <li id = "second">
+                <%= link_to("ログアウト", destroy_user_session_path)  %> 
+              </li>
+              <li id = "third">
+                <%= link_to("Myルーム", edit_user_registration_path)  %> 
+              </li>
+           </ul>
+        </nav>  
+      </div>
+      <div class = "header-icon">
+        <ul>
+          <li>
+            <form id = "news_form" action = "#" method = "get">
+              <button type = "submit" id = news_btn>
+               <i class="far fa-bell fa-lg fa-fw"></i>
+              </button>
+            </form>
+          </li>
+          <li>
+           <a href="#"><img src="https://via.placeholder.com/48x48" alt="バーナー1"></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    
+    <main>
+          <div class = "making_room">
+           <h1>ルームを作る</h1>
+           <% @room.errors.full_messages.each do |message| %>
+                <div class="form_error">
+                  <%= message %>
+                </div>
+           <% end %>
+            <%= form_for @room, url: rooms_path do |f| %>
+             <div class ="job_world">
+               <p id = "select">志望業種を選択してください</p>
+               <p id = "explain">※複数選択可</p>
+                <div class = "world_form">
+                    
+                    <label><%= f.radio_button :job_world, "金融・保険", {:checked => true}  %>金融・保険</label>
+                   
+                    <label><%= f.radio_button :job_world, "IT・インターネット" %>IT・インターネット</label>
+                   
+                    <label><%= f.radio_button :job_world, "広告" %>広告</label>
+
+                    <label><%= f.radio_button :job_world, "商社" %>商社</label>
+                    
+                    <label><%= f.radio_button :job_world, "教育" %>教育</label>
+                    
+                    <label><%= f.radio_button :job_world, "人材" %>人材</label>
+                    
+                    <label><%= f.radio_button :job_world, "メーカー" %>メーカー</label>
+                    
+                    <label><%= f.radio_button :job_world, "マスコミ・メディア" %>マスコミ・メディア</label>
+                   
+                    <label><%= f.radio_button :job_world, "インフラ" %>インフラ</label>
+                    
+                    <label><%= f.radio_button :job_world, "メディカル" %>メディカル</label>
+                    
+                    <label><%= f.radio_button :job_world, "流通・小売・サービス" %>流通・小売・サービス</label>
+                   
+                    <label><%= f.radio_button :job_world, "コンサルティング" %>コンサルティング</label>
+                    
+                    <label><%= f.radio_button :job_world, "官公庁" %>官公庁</label>
+                    
+                    <label><%= f.radio_button :job_world, "その他" %>その他</label>
+                </div>
+             </div>
+             
+             <div class ="job_contents">
+               <p id = "select_1">志望職種を選択してください</p>
+               <p id = "explain_1">※複数選択可</p>
+                  <div class = "contents_form"> 
+                  
+                    <label><%= f.radio_button :job_contents, "営業" %>営業</label>
+                    
+                    <label><%= f.radio_button :job_contents, "人事" %>人事</label>
+                   
+                    <label><%= f.radio_button :job_contents, "マーケティング" %>マーケティング</label>
+
+                    <label><%= f.radio_button :job_contents, "企画" %>企画</label>
+                   
+                    <label><%= f.radio_button :job_contents, "コンサル" %>コンサル</label>
+                   
+                    <label><%= f.radio_button :job_contents, "経理・財務" %>経理・財務</label>
+                    
+                    <label><%= f.radio_button :job_contents, "エンジニア" %>エンジニア</label>
+        
+                    <label><%= f.radio_button :job_contents, "デザイナー" %>デザイナー</label>
+                    
+                    <label><%= f.radio_button :job_contents, "研究開発" %>研究開発</label>
+                   
+                    <label><%= f.radio_button :job_contents, "総合職" %>総合職</label>
+                   
+                    <label><%= f.radio_button :job_contents, "一般職" %>一般職</label>
+                    
+                    <label><%= f.radio_button :job_contents, "その他" %>その他</label>
+                  </div> 
+             </div>
+             
+             <div class ="room_condition">
+               <p id = "select_2">入室条件を選択してください</p>
+               <p id = "explain_2">※複数選択可</p>
+                  <div class = "condition_form">
+                    
+                    <label><%= f.radio_button :room_condition, "志望業種が同じ方" %>志望業種が同じ方</label>
+                    
+                    <label><%= f.radio_button :room_condition, "志望職種が同じ方" %>志望職種が同じ方</label>
+                   
+                    <label><%= f.radio_button :room_condition, "誰でも可" %>誰でも可</label>
+                    
+                    <label><%= f.radio_button :room_condition, "男性の方" %>男性の方</label>
+                   
+                    <label><%= f.radio_button :room_condition, "女性の方" %>女性の方</label>
+                    
+                    <label><%= f.radio_button :room_condition, "その他" %>その他</label>
+                  </div>
+             </div>
+             
+             
+             <div class = "next_button">
+               <%= f.submit "次へ" %>
+             </div>
+           <% end %>
+          </div>
+    </main>
+</body>
+</html>

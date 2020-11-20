@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ルーム参加</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/room_show.scss">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <div class="header-logo">
+        <nav>
+            <ul>
+             <li id = "first">
+                <%= link_to("練習", root_path)  %>
+              </li>
+              <li id = "second">
+                <%= link_to("ログアウト", destroy_user_session_path)  %> 
+              </li>
+              <li id = "third">
+                <%= link_to("Myルーム", edit_user_registration_path)  %> 
+              </li>
+           </ul>
+        </nav>  
+      </div>
+      <div class = "header-icon">
+        <ul>
+          <li>
+            <form id = "news_form" action = "#" method = "get">
+              <button type = "submit" id = news_btn>
+               <i class="far fa-bell fa-lg fa-fw"></i>
+              </button>
+            </form>
+          </li>
+          <li>
+           <a href="#"><img src="https://via.placeholder.com/48x48" alt="バーナー1"></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    
+    <main>
+        <div class = "showroom">
+            <div id = "back_showroom"></div>
+                <ul>
+                  <li>
+                    <a href="#"><img src="https://via.placeholder.com/100x100" alt="バーナー1"></a>
+                  </li>
+                  <li>
+                      <p id = "job_world_show">志望業種</p>
+                      <div class = "job_world_name_show">
+                      <%= @room.job_world %>
+                      </div>
+                  </li>
+                  <li>
+                      <p id = "job_kind_show">志望職種</p>
+                      <div class = "job_kind_name_show">
+                      <%= @room.job_contents %>
+                      </div>
+                  </li>
+                  <li>
+                      <p id = "hope_show">入室条件</p>
+                      <div class = "hope_name_show">
+                      <%= @room.room_condition %>
+                      </div>
+                  </li>
+                </ul>
+                 <p id = "practice_explain">入室が許可されたらお互いに面接官役・就活生役になり練習を行います。</p>
+                 <br>
+                 <p id = "frirst_practice_explain">あなたは初め<span id = "interviewer">面接官役</span>です</p>
+        </div>
+              
+            <%= form_with url: rooms_path, method: :post, local: true do |f| %>
+              <div class = "join_room_button">
+                  <%= f.submit "入室をリクエストする" %>
+              </div>
+            <% end %>
+    </main>
+</body>
+</html>

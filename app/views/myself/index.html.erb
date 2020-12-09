@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ルーム一覧</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/home.scss">
+  <link rel="stylesheet" href="css/myself_index.scss">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 <body>
@@ -64,52 +64,17 @@
       <div class="container">
           <nav>
               <ul class = "main-top">
-               <li class = "current"><%= link_to("誰かと",root_path) %></li>
-               <li class = "current_1"><%= link_to("1人で",myself_path) %></li>
+               <li class = "current_1"><%= link_to("誰かと",root_path) %></li>
+               <li class = "current"><%= link_to("1人で",myself_path) %></li>
               </ul>
           </nav>
-          <div class = "make_room">
-              <div class = "success">
-                <%= flash[:notice] %>
+          <p id = "sentense">*実際の面接と同じように話しましょう</p>
+          <p id = "sentense_1">*用意ができたらスタートボタンを押し始めてください</p>
+          
+           
+              <div class = "myself_button">
+                  <%= link_to("スタート", only_path)  %>
               </div>
-            <section>
-              <h2 id = "room_by_me">自分でルームを作る</h2>
-              <div class = "make_button">
-              <%= link_to("ルームを作る",new_room_path) %>
-              </div>
-            </section>
-          </div>
-          <div class = "people_room">
-           <h2 id = "find_room">誰かのルームに参加する</h2>
-            <% @rooms.each do |room| %>
-                     <div class = "person_room">
-                        <ul>
-                          <li>
-                             <img src = <%= room.user.image_name %> >
-                             <%= link_to("#{room.user.name}さんのルーム", "/rooms/#{room.id}" , {class: "name"}) %>
-                          </li>
-                          <li>
-                             <p id = "job_world">志望業種</p>
-                             <div class = "job_world_name">
-                               <%= room.job_world %>
-                             </div>
-                          </li>
-                          <li>
-                             <p id = "job_kind">志望職種</p>
-                             <div class = "job_kind_name">
-                               <%= room.job_contents %>
-                             </div>
-                          </li>
-                          <li>
-                             <p id = "hope">入室条件</p>
-                             <div class = "hope_name">
-                               <%= room.room_condition %>
-                             </div>
-                          </li>
-                        </ul>
-                      </div>
-              <% end %>
-          </div>
       </div>
     </main>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

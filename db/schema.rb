@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_18_033603) do
+ActiveRecord::Schema.define(version: 2020_11_21_090411) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(version: 2020_11_18_033603) do
     t.integer "job_world", default: 0, null: false
     t.integer "job_contents", default: 0, null: false
     t.integer "room_condition", default: 0, null: false
-    t.boolean "is_confirmed", default: false, null: false
     t.integer "user_id"
   end
 

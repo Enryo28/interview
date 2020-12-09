@@ -4,6 +4,8 @@
   left: 290px;
   top: 170px;
   border-radius: 10px;
+  width: 100px;
+  height: 100px;
 }
 
 .showroom ul {
@@ -130,8 +132,8 @@
     border-radius: 8px;
 }
 
-.join_room_button input {
-  width: 900px;
+.join_room_button a {
+  width: 880px;
   display: block;
   padding: 20px;
   text-decoration: none;
@@ -142,7 +144,7 @@
   font-size: 20px;
 }
 
-.join_room_button input:hover {
+.join_room_button a:hover {
      position: relative;
      opacity: 0.8;
      cursor: pointer;

@@ -7,17 +7,28 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # GET /resource/sign_up
   # def new
   #   super
+  #   @room = Room.new
   # end
 
   # POST /resource
   # def create
   #   super
+  #   @room = Room.new(room_params)
   # end
 
   # GET /resource/edit
-  # def edit
-  #   super
-  # end
+  def edit
+    super
+    @user = User.find_by(id: params[:id])
+    @user.name = params[:name]
+    @user.email = params[:email]
+    @user.image_name = params[:image_name]
+    @room.job_world = params[:job_world]
+    @room.job_contents = params[:job_contents]
+    @room.room_condition = params[:room_condition]
+    @room = Room.find_by(id: params[:id])
+    
+  end
 
   # PUT /resource
   # def update
@@ -60,6 +71,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super(resource)
   # end
   
- 
+  
+ private
+  def room_params
+    params.require(:room).permit(:job_world, :job_contents, :room_condition).merge(user_id: current_user.id)
+  end
+  
+  def user_params
+    params.require(:user).permit(:name, :image_name, :email, :password, :password_confirmation)
+  end
+
   
 end

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>面接練習</title>
+    <link rel="stylesheet" href="../_shared/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">面接練習</h1>
+      <p class="note">
+        IDを押して呼び出してください
+      </p>
+      <div class="p2p-media">
+        <div class="remote-stream">
+          <video id="js-remote-stream"  autoplay muted playsinline></video>
+        </div>
+        <div class="local-stream">
+          <video id="js-local-stream"  autoplay muted playsinline></video>
+          <p>あなたの ID: <span id="js-local-id"></span></p>
+          <input type="text" placeholder="Remote Peer ID" id="js-remote-id">
+          <button id="js-call-trigger">呼び出し</button>
+          <button id="js-close-trigger">閉じる</button>
+        </div>
+      </div>
+      <p class="meta" id="js-meta"></p>
+    </div>
+    <script src="//cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+    <script src="../_shared/key.js"></script>
+    <script src="./script.js"></script>
+    <script>
+      let localStream;
+    
+      // カメラ映像取得
+      navigator.mediaDevices.getUserMedia({video: true, audio: true})
+        .then( stream => {
+        // 成功時にvideo要素にカメラ映像をセットし、再生
+        const videoElm = document.getElementById('js-local-stream');
+        videoElm.srcObject = stream;
+        videoElm.play();
+        // 着信時に相手にカメラ映像を返せるように、グローバル変数に保存しておく
+        localStream = stream;
+      }).catch( error => {
+        // 失敗時にはエラーログを出力
+        console.error('mediaDevice.getUserMedia() error:', error);
+        return;
+      });
+          //Peer作成
+      const peer = new Peer({
+        key: '5ac8fb66-fb5c-4f89-82a0-9cd0949fcb64',
+        debug: 3
+      });
+      
+       //PeerID取得
+      peer.on('open', () => {
+          document.getElementById('my-id').textContent = peer.id;
+      });
+      // 発信処理
+        document.getElementById('make-call').onclick = () => {
+          const theirID = document.getElementById('their-id').value;
+          const mediaConnection = peer.call(theirID, localStream);
+          setEventListener(mediaConnection);
+        };
+        
+        // イベントリスナを設置する関数
+        const setEventListener = mediaConnection => {
+          mediaConnection.on('stream', stream => {
+            // video要素にカメラ映像をセットして再生
+            const videoElm = document.getElementById('their-video')
+            videoElm.srcObject = stream;
+            videoElm.play();
+          });
+        }
+        //着信処理
+        peer.on('call', mediaConnection => {
+          mediaConnection.answer(localStream);
+          setEventListener(mediaConnection);
+        });
+          peer.on('error', err => {
+          alert(err.message);
+        });
+        peer.on('close', () => {
+        alert('通信が切断しました。');
+        });
+      </script>
+  </body>
+</html>
+

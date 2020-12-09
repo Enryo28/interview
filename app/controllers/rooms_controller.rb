@@ -1,6 +1,6 @@
 class RoomsController < ApplicationController
-  before_action :authenticate_user, {only:[:new, :show]}
-  
+  before_action :authenticate_user!, {only:[:new, :show]}
+
   def index
       @rooms = Room.all.order(created_at: :desc)
   end
@@ -11,7 +11,8 @@ class RoomsController < ApplicationController
   end
   
   def create
-    @room = Room.new(room_params,user_id: @current_user.id)
+    @room = Room.new(room_params)
+    
     if @room.save
         redirect_to root_path
         flash[:notice] = "ルームを作成しました。"
@@ -24,15 +25,28 @@ class RoomsController < ApplicationController
     @room = Room.find_by(id: params[:id])
   end
 
+  def edit 
+    # @room = Room.new(room_params)
+    # @room = Room.find_by(id: params[:id])
+  end
+  
+  
+def authenticate_user!
+    unless user_signed_in?
+      flash[:notice] = "ログインが必要です"
+      redirect_to root_path
+    end
+end
+
 
 
 private
   def room_params
-    params.require(:room).permit(:job_world, :job_contents, :room_condition)
+    params.require(:room).permit(:job_world, :job_contents, :room_condition).merge(user_id: current_user.id)
   end
   
   def user_params
-    params.permit(:name, :image_name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :image_name, :email, :password, :password_confirmation)
   end
 
 end

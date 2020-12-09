@@ -1,0 +1,93 @@
+.edit_room img {
+  position: absolute;
+  float: left;
+  left: 470px;
+  top: 220px;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.edit_room ul {
+    list-style-type: none;
+}
+
+
+#back_edit_room   {
+    width: 530px;
+    height: 145px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    float: left;
+    left: 450px;
+    top: 200px;
+    bottom: 18px;
+    right: 936px;
+        
+}
+
+.edit_room h2 {
+   color: white;
+   background-color: #000080;
+   border-radius: 20px;
+   padding: 10px;
+   width: 510px;
+   font-weight: normal;
+   text-align: center;
+   margin-left: 450px;
+}
+
+.edit_room h3 {
+    color: red;
+    margin-left: 450px;
+    margin-top: 220px;
+}
+
+.delete p {
+    float: left;
+    margin-left: 450px;
+}
+
+
+
+.delete  {
+    float: left;
+    text-align: center;
+    height: 50px;
+    
+    border-radius: 8px;
+}
+
+.delete input {
+  width: 200px;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: #000080;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 620px;
+  margin-top: 55px;
+}
+
+.delete input:hover {
+     position: relative;
+     opacity: 0.8;
+     cursor: pointer;
+}
+
+.back  {
+     margin-left: 480px;
+     
+}
+
+.edit_name {
+     margin-left: 650px;
+     position: absolute;
+     top: 250px;
+     font-weight: bold;
+     font-size: 25px;
+}

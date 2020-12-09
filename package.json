@@ -1,5 +1,7 @@
 {
   "name": "intervew",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "skyway-js": "^4.1.1"
+  }
 }

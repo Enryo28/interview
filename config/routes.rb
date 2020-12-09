@@ -7,10 +7,13 @@ Rails.application.routes.draw do
     # end
   end
   root "rooms#index"
- 
- 
+  get "myself" => "myself#index"
+  get "practice" => "practice#index"
+  get "only" => "only#index"
   # resources :users, only: [:create, :show, :edit, :update] do
     
   # end
+  
+  
   
 end

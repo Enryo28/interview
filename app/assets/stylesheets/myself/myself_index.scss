@@ -1,0 +1,55 @@
+main nav ul li.current a{
+    background-color: #B5C4FF;
+    font-weight: bolder;
+}
+
+#sentense {
+    position: absolute;
+    float: left;
+    width: 900px;
+    left: 270px;
+    top: 260px;
+    right: 936px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#sentense_1 {
+    position: absolute;
+    float: left;
+    width: 900px;
+    left: 270px;
+    top: 330px;
+    right: 936px;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 2px solid #C4C4C4;
+    padding-bottom: 30px;
+}
+
+.myself_button {
+    float: left;
+    text-align: center;
+    height: 70px;
+    margin-left: 270px;
+    margin-top: 350px;
+    border-radius: 8px;
+}
+
+.myself_button a {
+  width: 900px;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  background-color: #000080;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.myself_button a:hover {
+     position: relative;
+     opacity: 0.8;
+     cursor: pointer;
+}

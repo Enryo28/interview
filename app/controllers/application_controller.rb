@@ -12,7 +12,6 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit :sign_in, keys: added_attrs
   end
   
-  
   def after_sign_in_path_for(resource)
     root_path
   end
@@ -20,22 +19,7 @@ class ApplicationController < ActionController::Base
   def after_sign_out_path_for(resource)
     root_path
   end
-  
-  
-  
-  def authenticate_user
-    unless user_signed_in?
-      flash[:notice] = "ログインが必要です"
-      redirect_to root_path
-    end
-  end
-  
-  
 
-  def current_user
-    return unless session[:user_id]
-    @current_user = User.find(session[:user_id])
-  end
-      
+ 
   
 end

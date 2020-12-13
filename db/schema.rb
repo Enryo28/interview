@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2020_12_12_121702) do
     t.integer "job_contents", default: 0, null: false
     t.integer "room_condition", default: 0, null: false
     t.integer "user_id"
+    t.boolean "is_confirmed", default: false, null: false
   end
 
   create_table "users", force: :cascade do |t|

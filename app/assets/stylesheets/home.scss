@@ -209,36 +209,11 @@ main nav ul li.current a{
 }
 
 .people_room h2  {
-    // float: left;
     font-size: 24px;
     position: absolute;
-    margin-right: 638px;
-    // width: 331px;
-    // height: 29px;
-    // margin-left: 200px;
-    // top: 430px;
-    // padding-bottom: 40px;
+    margin-left: 270px;
     margin-top: 30px;
 }
-
-// #job_serch {
-//     position: absolute;
-//     width: 900px;
-//     height: 56px;
-//     margin-left: 270px;
-//     margin-top: 400px;
-// }
-
-// #search_box {
-//     height: 44px;
-//     padding: 0 10px;
-//     position: absolute;
-//     border-radius: 10px;
-//     background: white;
-//     border: none;
-//     width: 880px;
-  
-// }
    
 
 // #sbtn {
@@ -386,7 +361,6 @@ main nav ul li.current a{
 .people_room {
     flex-wrap: wrap;
     display: flex;
-    justify-content: center;
     width: 1440px;
 }
 

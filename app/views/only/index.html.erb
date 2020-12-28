@@ -4,12 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
-    <title>面接練習</title>
-    
+    <title>単独面接練習</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/home.scss">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   </head>
   <body>
+    <header>
+      <div class="header-logo">
+        <nav>
+          <% if user_signed_in? %>
+           <ul>
+              <li id = "first">
+                <%= link_to("練習", root_path)  %>
+              </li>
+              <li id = "second">
+                <%= link_to("ログアウト", destroy_user_session_path)  %> 
+              </li>
+              <li id = "third">
+                <%= link_to("Myルーム", edit_user_registration_path)  %> 
+              </li>
+           </ul>
+          <% else %>
+           <ul>
+              <li id = "first">
+                <%= link_to("練習", root_path)  %>
+              </li>
+              <li id = "second">
+                <%= link_to("ログイン", new_user_session_path)  %>
+              </li>
+              <li id = "third">
+                <%= link_to("新規登録", new_user_registration_path)  %>
+              </li>
+           </ul>
+          <% end %>
+        </nav>  
+      </div>
+      <div class = "header-icon">
+        <ul>
+          <li>
+            <form id = "news_form" action = "#" method = "get">
+              <button type = "submit" id = news_btn>
+               <i class="far fa-bell fa-lg fa-fw"></i>
+              </button>
+            </form>
+          </li>
+        <% if user_signed_in? %>
+          <li>
+           <img src = <%= current_user.image_name %> >
+          </li>
+        <% else %>
+          <li>
+           <a href="#"><img src="https://via.placeholder.com/48x48" alt="プロフ画像"></a>
+          </li>
+        <% end %>
+        </ul>
+      </div>
+    </header>
+    <main>
       <h1 class="heading">面接練習</h1>
         <video id="js-local-stream"  autoplay muted playsinline></video>
+    </main>
     <script>
       let localStream;
     

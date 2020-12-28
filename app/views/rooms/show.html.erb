@@ -34,15 +34,9 @@
               </button>
             </form>
           </li>
-        <% if user_signed_in? %>
           <li>
            <img src = <%= current_user.image_name %> >
           </li>
-        <% else %>
-          <li>
-           <a href="#"><img src="https://via.placeholder.com/48x48" alt="バーナー1"></a>
-          </li>
-        <% end %>
         </ul>
       </div>
     </header>

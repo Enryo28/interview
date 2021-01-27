@@ -66,6 +66,7 @@ end
 
 group :production do
   gem 'pg', '~> 0.18.4'
+  gem 'fog-aws'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -87,4 +88,6 @@ gem 'devise-i18n'
 gem 'devise-i18n-views'
 
 
-gem "aws-sdk-s3", require: false   
+# gem "aws-sdk-s3", require: false   
+
+gem 'aws-sdk-s3'

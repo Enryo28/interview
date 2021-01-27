@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_12_121702) do
+ActiveRecord::Schema.define(version: 2020_12_12_121334) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -36,11 +36,10 @@ ActiveRecord::Schema.define(version: 2020_12_12_121702) do
   create_table "rooms", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "is_confirmed", default: false, null: false
     t.integer "job_world", default: 0, null: false
     t.integer "job_contents", default: 0, null: false
     t.integer "room_condition", default: 0, null: false
-    t.integer "user_id"
-    t.boolean "is_confirmed", default: false, null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -46,24 +46,24 @@
             <div id = "back_showroom"></div>
                 <ul>
                   <li>
-                    <%= image_tag(room.user.image_name.service_url ) %>
+                    <%= image_tag(room.user.image_name.service_url ) %> 
                   </li>
                   <li>
                       <p id = "job_world_show">志望業種</p>
                       <div class = "job_world_name_show">
-                      <%= @room.job_world %>
+                      <%= room.job_world %>
                       </div>
                   </li>
                   <li>
                       <p id = "job_kind_show">志望職種</p>
                       <div class = "job_kind_name_show">
-                      <%= @room.job_contents %>
+                      <%= room.job_contents %>
                       </div>
                   </li>
                   <li>
                       <p id = "hope_show">入室条件</p>
                       <div class = "hope_name_show">
-                      <%= @room.room_condition %>
+                      <%= room.room_condition %>
                       </div>
                   </li>
                 </ul>

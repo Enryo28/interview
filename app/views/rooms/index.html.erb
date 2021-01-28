@@ -88,7 +88,7 @@
                         <ul>
                           <li>
                              <%= image_tag(room.user.image_name.service_url ) %>
-                             <%= link_to("#{room.user.name}さんのルーム", room_path , {class: "name"}) %>
+                             <%= link_to("#{room.user.name}さんのルーム", "/rooms/#{room.id}" , {class: "name"}) %>
                           </li>
                           <li>
                              <p id = "job_world">志望業種</p>

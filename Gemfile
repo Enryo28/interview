@@ -78,8 +78,8 @@ gem 'rails-i18n'
 
 
 
-#画像アップロード
-gem 'carrierwave'
+
+
 #ログイン一双
 gem 'devise'
 
@@ -88,7 +88,6 @@ gem 'devise-i18n'
 gem 'devise-i18n-views'
 
 
-# gem "aws-sdk-s3", require: false   
+gem "aws-sdk-s3"
 
-gem 'aws-sdk-s3'
-gem 'fog-aws'
+

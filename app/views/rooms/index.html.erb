@@ -50,7 +50,7 @@
           </li>
         <% if user_signed_in? %>
           <li>
-           <img src = <%= current_user.image_name %> >
+           <%= image_tag(current_user.image_name.service_url ) %>
           </li>
         <% else %>
           <li>
@@ -87,7 +87,7 @@
                      <div class = "person_room">
                         <ul>
                           <li>
-                             <img src = <%= room.user.image_name %> >
+                             <%= image_tag(user.image_name.service_url ) %>
                              <%= link_to("#{room.user.name}さんのルーム", "/rooms/#{room.id}" , {class: "name"}) %>
                           </li>
                           <li>

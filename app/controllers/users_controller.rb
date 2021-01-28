@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
  
   def index
-    @users = User.all.order(created_at: :desc)
+    @users = User.all.order(created_at: :desc) 
   end
   
   def new
@@ -16,8 +16,7 @@ class UsersController < ApplicationController
         # image = params[:image_name]
         # File.binwrite("public/user_images/#{@user.image_name}", image.read)
         end 
-
-    
+       
         if @user.save
           session[:user_id] = @user.id
           flash[:notice] = "ユーザー登録が完了しました"
@@ -27,6 +26,8 @@ class UsersController < ApplicationController
           render :new
         end
   end
+  
+  
     
   def show
     @user = User.find_by(id: params[:id])

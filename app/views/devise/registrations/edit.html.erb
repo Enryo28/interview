@@ -49,7 +49,7 @@
             </form>
           </li>
           <li>
-           <img src = <%= current_user.image_name %> >
+           <%= image_tag(current_user.image_name.service_url ) %>
           </li>
         </ul>
       </div>
@@ -60,7 +60,7 @@
             <div id = "back_edit_room"></div>
                 <ul>
                   <li>
-                    <img src = <%= current_user.image_name %> >
+                    <%= image_tag(current_user.image_name.service_url ) %>
                   </li>
                   <li>
                     <div class = "edit_name">

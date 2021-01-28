@@ -35,7 +35,7 @@
             </form>
           </li>
           <li>
-           <img src = <%= current_user.image_name %> >
+           <%= image_tag(current_user.image_name.service_url ) %>
           </li>
         </ul>
       </div>

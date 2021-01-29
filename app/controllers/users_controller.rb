@@ -11,11 +11,11 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     
-        # if params[:image_name]
-        # @user.image_name = "#{@user.id}.jpg"
+        if params[:image_name]
+        @user.image_name = "#{@user.id}.jpg"
         # image = params[:image_name]
         # File.binwrite("public/user_images/#{@user.image_name}", image.read)
-        # end 
+        end 
        
         if @user.save
           session[:user_id] = @user.id

@@ -1,7 +1,7 @@
 .showroom img {
   position: absolute;
   float: left;
-  left: 290px;
+  left: 440px;
   top: 170px;
   border-radius: 10px;
   width: 100px;
@@ -14,13 +14,13 @@
 
 
 #back_showroom   {
-    width: 900px;
+    width: 650px;
     height: 145px;
     background-color: white;
     border-radius: 10px;
     position: absolute;
     float: left;
-    left: 270px;
+    left: 420px;
     top: 150px;
     bottom: 18px;
     right: 936px;
@@ -30,7 +30,7 @@
 #job_world_show {
   position: absolute;
   float: left;
-  left: 410px;
+  left: 570px;
   top: 150px;
   // bottom: 18px;
   right: 936px;
@@ -44,7 +44,7 @@
 #job_kind_show {
   position: absolute;
   float: left;
-  left: 410px;
+  left: 570px;
   top: 195px;
   right: 936px;
   width: 85px;
@@ -57,7 +57,7 @@
 #hope_show {
   position: absolute;
   float: left;
-  left: 410px;
+  left: 570px;
   top: 240px;
   right: 936px;
   width: 85px;
@@ -70,7 +70,7 @@
 .job_world_name_show {
   position: absolute;
   float: left;
-  left: 530px;
+  left: 710px;
   top: 165px;
   right: 936px;
   width: 200px;
@@ -80,7 +80,7 @@
 .job_kind_name_show {
   position: absolute;
   float: left;
-  left: 530px;
+  left: 710px;
   top: 210px;
   right: 936px;
   width: 200px;
@@ -91,7 +91,7 @@
 .hope_name_show {
   position: absolute;
   float: left;
-  left: 530px;
+  left: 710px;
   top: 255px;
   right: 936px;
   width: 200px;
@@ -102,8 +102,8 @@
 #practice_explain {
     position: absolute;
     float: left;
-    width: 900px;
-    left: 270px;
+    width: 700px;
+    left: 420px;
     top: 330px;
     right: 936px;
     font-weight: bold;
@@ -113,8 +113,8 @@
 #frirst_practice_explain {
     position: absolute;
     float: left;
-    width: 900px;
-    left: 270px;
+    width: 650px;
+    left: 420px;
     top: 400px;
     right: 936px;
     font-weight: bold;
@@ -127,13 +127,13 @@
     float: left;
     text-align: center;
     height: 70px;
-    margin-left: 270px;
+    margin-left: 400px;
     margin-top: 430px;
     border-radius: 8px;
 }
 
 .join_room_button a {
-  width: 880px;
+  width: 650px;
   display: block;
   padding: 20px;
   text-decoration: none;

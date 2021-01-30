@@ -24,7 +24,7 @@ class User < ApplicationRecord
         errors.add(:image_name, 'にはjpegまたはpngファイルを添付してください')
       end
     else
-      errors.add(:image_name, 'ファイルを添付してください')
+      errors.add(:image_name, 'を添付してください')
     end
   end
   

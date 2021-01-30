@@ -3,13 +3,13 @@
 Web面接対策アプリです。
 
 ・HTML
-br
+<br>
 ・SCSS
-br
+<br>
 ・Ruby
-br
+<br>
 ・Ruby on Rails 
-br
+<br>
 ・AWS
-br
+<br>
 ・SQL

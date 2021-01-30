@@ -50,7 +50,7 @@
           </li>
         <% if user_signed_in? %>
           <li>
-           <%= image_tag(current_user.image_name.service_url ) %>
+           <%= image_tag(current_user.image_name.try(:service_url) ) %> 
           </li>
         <% else %>
           <li>
@@ -87,7 +87,7 @@
                      <div class = "person_room">
                         <ul>
                           <li>
-                             <%= image_tag(room.user.image_name.service_url ) %>
+                             <%= image_tag(room.user.image_name.try(:service_url) ) %> 
                              <%= link_to("#{room.user.name}さんのルーム", "/rooms/#{room.id}" , {class: "name"}) %>
                           </li>
                           <li>

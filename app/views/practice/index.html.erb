@@ -51,7 +51,7 @@
           </li>
         <% if user_signed_in? %>
           <li>
-           <%= image_tag(current_user.image_name.service_url ) %>
+           <%= image_tag(current_user.image_name.try(:service_url) ) %> 
           </li>
         <% else %>
           <li>

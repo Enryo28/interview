@@ -31,6 +31,7 @@ class RoomsController < ApplicationController
   end
   
   
+  
 def authenticate_user!
     unless user_signed_in?
       flash[:notice] = "ログインが必要です"

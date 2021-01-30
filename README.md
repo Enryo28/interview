@@ -1,25 +1,14 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # interview
+
+Web面接対策アプリです。
+
+・HTML
+・SCSS
+・Ruby
+・Ruby on Rails 
+・AWS
+・SQL
+
+![ホーム画面](スクリーンショット 2021-01-07 1.50.56 2.png)
+![ルーム作成画面](スクリーンショット 2021-01-07 1.51.03 2.png)
+![面接へ](スクリーンショット 2021-01-07 1.51.13 2.png)
